@@ -25,17 +25,22 @@ jobs:
         with: {go_arch: arm64}
 
   release-please:
-    needs: [build-release-binaries]
     runs-on: ubuntu-22.04
+    outputs:
+      tag_name: ${{ steps.release.outputs.tag_name }}
     steps:
       - uses: googleapis/release-please-action@db8f2c60ee802b3748b512940dde88eabd7b7e01 # v3.7.13
         id: release
         with:
           release-type: go
           package-name: test-composite-actions
+
+  upload-release-binaries:
+    needs: [build-release-binaries, release-please]
+    runs-on: ubuntu-22.04
+    steps:
       - name: Upload Release Artifact
-        if: ${{ steps.release.outputs.release_created }}
         env:
           GH_TOKEN: ${{ github.token }}
         run:
-          gh release upload ${{ steps.release.outputs.tag_name }} dist/binary_amd64 dist/binary_arm64
+          gh release upload ${{ needs.release-please.outputs.tag_name }} dist/binary_amd64 dist/binary_arm64
