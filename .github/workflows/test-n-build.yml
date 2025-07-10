@@ -28,7 +28,7 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v4
-      - run: gh run download -p '*,'
+      - run: gh run download
         env:
           GH_TOKEN: ${{ github.token }}
       - run: ls -lah
