@@ -1,19 +1,15 @@
 ---
 name: Build go binaries
-description: ""
+description: "Build Go binaries for a specific architecture"
 author: 'newrushbolt'
+
 inputs:
   github_token:
     description: 'GITHUB_TOKEN'
     default: '${{ github.token }}'
+
 runs:
   using: "composite"
-  # strategy:
-  #   matrix:
-  #     GOARCH: [arm64, amd64]
-  env:
-    GOARCH: 'amd64'
-    #  ${{ matrix.GOARCH }}
   steps:
     - run: echo "go build -o ${GOARCH}"
       shell: bash
