@@ -28,7 +28,7 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v4
-      - run: gh run download -p 'binary_*,'
+      - run: gh run download -p 'dist/binary_*,'
         env:
           GH_TOKEN: ${{ github.token }}
       - run: ls -lah
