@@ -16,6 +16,5 @@ runs:
   # env:
   #   GOARCH: ${{ matrix.GOARCH }}
   steps:
-    steps:
-      - run: echo "go build -o ${GOARCH}"
-      - run: echo "upload ${GOARCH}"
+    - run: echo "go build -o ${GOARCH}"
+    - run: echo "upload ${GOARCH}"
