@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.5](https://github.com/newrushbolt/test-composite-actions/compare/v1.0.4...v1.0.5) (2025-07-10)
+
+
+### Bug Fixes
+
+* add binaries to release v6 ([c3a40d6](https://github.com/newrushbolt/test-composite-actions/commit/c3a40d6dc619861359818fe2c73a3688169b8fd9))
+* add binaries to release v6 ([0547d39](https://github.com/newrushbolt/test-composite-actions/commit/0547d398542e8992b561f9c7224522315685a6bc))
+* add binaries to release v6 ([fbb092a](https://github.com/newrushbolt/test-composite-actions/commit/fbb092af511ffd985cf1fe9ba9fa709fc9ad1805))
+* add binaries to release v6 ([3099107](https://github.com/newrushbolt/test-composite-actions/commit/3099107326415d3084721537b3695434fd820bab))
+* add binaries to release v6 ([ddc619b](https://github.com/newrushbolt/test-composite-actions/commit/ddc619b2a376ebbd76162660a44bb2d1f718c141))
+* add binaries to release v6 ([9c30d51](https://github.com/newrushbolt/test-composite-actions/commit/9c30d51d4a16b2c816fe9b5a3d3bdda6f46b371f))
+* add binaries to release v6 ([2272b40](https://github.com/newrushbolt/test-composite-actions/commit/2272b40560db8a8776101c7c0149c7bbd12c9638))
+* add binaries to release v6 ([7804fa9](https://github.com/newrushbolt/test-composite-actions/commit/7804fa9e3eff99e1af398c7bd96d4e29a0914265))
+
 ## [1.0.4](https://github.com/newrushbolt/test-composite-actions/compare/v1.0.3...v1.0.4) (2025-07-10)
 
 
