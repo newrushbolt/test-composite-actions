@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: googleapis/release-please-action@db8f2c60ee802b3748b512940dde88eabd7b7e01 # v3.7.13
+        id: release
         with:
           release-type: go
           package-name: test-composite-actions
+      - name: Upload Release Artifact
+        if: ${{ steps.release.outputs.release_created }}
+        run:
+          gh release upload ${{ steps.release.outputs.tag_name }} dist/binary_amd64 dist/binary_arm64
