@@ -28,7 +28,9 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v4
-      - run: gh run download
-        env:
-          GH_TOKEN: ${{ github.token }}
-      - run: ls -lah
+      - name: Download build artifacts
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 #v4.3.0
+        with:
+          path: dist
+          merge-multiple: true
+      - run: ls -lah dist/
