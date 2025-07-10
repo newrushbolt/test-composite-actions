@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-22.04
     needs: build
     steps:
-      - run: gh run download -p '*,'
+      - run: gh run download -p 'binary_*,'
         env:
           GH_TOKEN: ${{ github.token }}
       - run: ls -lah
