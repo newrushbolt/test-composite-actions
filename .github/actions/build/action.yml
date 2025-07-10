@@ -17,9 +17,5 @@ runs:
   steps:
     - run: echo "go build -o ${GOARCH}"
       shell: bash
-      container:
-        image: quay.io/prometheus/golang-builder:1.23-base
     - run: echo "upload ${GOARCH}"
       shell: bash
-      container:
-        image: quay.io/prometheus/golang-builder:1.23-base

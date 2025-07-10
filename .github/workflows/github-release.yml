@@ -9,12 +9,17 @@ permissions:
   contents: write
 
 jobs:
-  create-github-release:
+  build-release-binaries:
     runs-on: ubuntu-22.04
+    container:
+      image: quay.io/prometheus/golang-builder:1.23-base
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/build
 
+  create-github-release:
+    runs-on: ubuntu-22.04
+    steps:
       - name: Upload binaries to release
         uses: softprops/action-gh-release@72f2c25fcb47643c292f7107632f7a47c1df5cd8 # v2.3.2
         with:

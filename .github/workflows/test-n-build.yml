@@ -13,6 +13,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    container:
+      image: quay.io/prometheus/golang-builder:1.23-base
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/build
