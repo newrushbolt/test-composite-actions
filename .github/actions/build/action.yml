@@ -2,7 +2,10 @@
 name: Build go binaries
 description: ""
 author: 'newrushbolt'
-inputs: {}
+inputs:
+  github_token:
+    description: 'GITHUB_TOKEN'
+    default: '${{ github.token }}'
 runs:
   using: "composite"
   # container:
@@ -14,6 +17,5 @@ runs:
   #   GOARCH: ${{ matrix.GOARCH }}
   steps:
     steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - run: echo "go build -o ${GOARCH}"
       - run: echo "upload ${GOARCH}"
