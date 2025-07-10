@@ -14,10 +14,10 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: touch "binary_${{ go_arch }}"
+    - run: touch "binary_${{ inputs.go_arch }}"
       shell: bash
     - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
       with:
         if-no-files-found: error
-        name: binary_${{ go_arch }}
-        path: binary_${{ go_arch }}
+        name: binary_${{ inputs.go_arch }}
+        path: binary_${{ inputs.go_arch }}
