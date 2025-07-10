@@ -48,4 +48,4 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run:
-          gh release upload ${{ needs.release-please.outputs.tag_name }} binary_*
+          gh release upload ${{ needs.release-please.outputs.tag_name }} dist/*
