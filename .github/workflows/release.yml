@@ -21,5 +21,7 @@ jobs:
           package-name: test-composite-actions
       - name: Upload Release Artifact
         if: ${{ steps.release.outputs.release_created }}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run:
           gh release upload ${{ steps.release.outputs.tag_name }} dist/binary_amd64 dist/binary_arm64
