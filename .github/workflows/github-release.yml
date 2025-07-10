@@ -21,9 +21,11 @@ jobs:
         with: {go_arch: arm64}
 
   create-github-release:
+    needs: [build-release-binaries]
     runs-on: ubuntu-22.04
     steps:
       - name: Upload binaries to release
         uses: softprops/action-gh-release@72f2c25fcb47643c292f7107632f7a47c1df5cd8 # v2.3.2
         with:
+          fail_on_unmatched_files: true
           files: dist/**
