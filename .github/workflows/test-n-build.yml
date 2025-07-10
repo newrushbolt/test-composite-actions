@@ -1,0 +1,19 @@
+---
+name: test-n-build
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+concurrency:
+  group: test-n-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4  # required so the local action exists on disk
+      - id: build
+        uses: ./.github/actions/build
