@@ -14,6 +14,5 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4  # required so the local action exists on disk
-      - id: build
-        uses: ./.github/actions/build
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/build
