@@ -1,0 +1,19 @@
+---
+name: Build go binaries
+description: ""
+author: 'newrushbolt'
+inputs: {}
+runs:
+  using: "composite"
+  # container:
+  #   image: quay.io/prometheus/golang-builder:1.23-base
+  # strategy:
+  #   matrix:
+  #     GOARCH: [arm64, amd64]
+  # env:
+  #   GOARCH: ${{ matrix.GOARCH }}
+  steps:
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - run: echo "go build -o ${GOARCH}"
+      - run: echo "upload ${GOARCH}"
