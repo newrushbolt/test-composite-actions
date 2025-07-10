@@ -15,6 +15,7 @@ runs:
   #     GOARCH: [arm64, amd64]
   # env:
   #   GOARCH: ${{ matrix.GOARCH }}
+  shell: bash
   steps:
     - run: echo "go build -o ${GOARCH}"
     - run: echo "upload ${GOARCH}"
