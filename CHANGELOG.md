@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/newrushbolt/test-composite-actions/compare/v1.0.2...v1.0.3) (2025-07-10)
+
+
+### Bug Fixes
+
+* add binaries to release v3 ([4ca3d42](https://github.com/newrushbolt/test-composite-actions/commit/4ca3d42d2ee51d769f2d090fece4212f30d0be93))
+
 ## [1.0.2](https://github.com/newrushbolt/test-composite-actions/compare/v1.0.1...v1.0.2) (2025-07-10)
 
 
