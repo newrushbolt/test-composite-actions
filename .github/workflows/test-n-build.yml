@@ -23,3 +23,9 @@ jobs:
         with: {go_arch: amd64}
       - uses: ./.github/actions/build
         with: {go_arch: arm64}
+  list-binaries:
+    runs-on: ubuntu-22.04
+    needs: build
+    steps:
+      - run: gh run download -p '*,'
+      - run: ls -lah
