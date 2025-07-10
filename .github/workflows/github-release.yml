@@ -16,6 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/build
+        with: {go_arch: amd64}
+      - uses: ./.github/actions/build
+        with: {go_arch: arm64}
 
   create-github-release:
     runs-on: ubuntu-22.04
